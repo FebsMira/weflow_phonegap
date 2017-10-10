@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>WeFlow</title>
+		<link rel="stylesheet" href="css/framework7.ios.min.css">
+		<link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/fullcalendar.css">
+	</head>
+	<body>
+		<div class="statusbar-overlay"></div>
+		<div class="panel-overlay"></div>
+
+		<div class="panel panel-left panel-reveal bg-grad-vertical shadow">
+			<div class="content-block" style="border-bottom:1px solid rgba(255,255,255,0.3);">
+				<div class="row" style="padding-top:10px; padding-bottom:20px">
+					<div class="col-25">
+						<a href="#" class="close-panel"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					</div>
+					<div class="col-75 text-right">
+						<h3>Preferências</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="content-block text-center">
+				<img class="avatar-sidebar" src="img/dummy.png" />
+				<b style="margin:8px 0px; display:block;">Bianca Fernandes</b>
+				<i class="fa fa-trophy" aria-hidden="true"></i> 138 pontos
+			</div>
+
+			<div class="list-block">
+				<ul>
+					<li class="item-content">
+						<div class="item-media"><i class="fa fa-trophy" aria-hidden="true"></i></div>
+						<div class="item-inner">
+							<div class="item-title">Meus pontos</div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="fa fa-user" aria-hidden="true"></i></div>
+						<div class="item-inner">
+							<div class="item-title">Perfil</div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="fa fa-car" aria-hidden="true"></i></div>
+						<div class="item-inner">
+							<div class="item-title">Veículos</div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="fa fa-gear" aria-hidden="true"></i></div>
+						<div class="item-inner">
+							<div class="item-title">Configurações</div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="fa fa-file" aria-hidden="true"></i></div>
+						<div class="item-inner">
+							<div class="item-title">Sobre nós</div>
+						</div>
+					</li>
+					<li class="item-content">
+						<div class="item-media"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+						<div class="item-inner">
+							<div class="item-title">Contato</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="content-block">
+				<img style="width:50%; display:block; margin:0 auto;" src="img/logo_white.png" />
+			</div>
+
+		</div>
+
+ 
+		<div class="views">
+			<div class="view view-main">
+				<div class="navbar navbar-hidden">
+					<div class="navbar-inner">
+						<div class="center sliding">WeFlow</div>
+					</div>
+				</div>
+				<div class="pages navbar-through toolbar-through">
+					<div data-page="index" class="page no-navbar no-toolbar">
+						<div class="page-content bg-image">
+							<div>
+								<img class="login-image" src="img/logo_white.png" />
+							</div>
+							<div class="content-block text-center">
+								<p>Saiba o que esperar da estrada dias ou<br>semanas antes da sua viagem</p>
+							</div>
+							<form id="index-form">
+								<div class="list-block">
+									<ul>
+										<li class="item-content">
+											<div class="item-inner">
+												<div class="item-title label"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+												<div class="item-input">
+													<input type="email" id="login_email" name="login_email" placeholder="Email">
+												</div>
+											</div>
+										</li>
+										<li class="item-content">
+											<div class="item-inner">
+												<div class="item-title label"><i class="fa fa-lock" aria-hidden="true"></i></div>
+												<div class="item-input">
+													<input type="password" id="login_password" name="login_password" placeholder="Senha">
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</form>
+							<div class="content-block">
+								<div class="row">
+									<div class="col-33"></div>
+									<div class="col-33"></div>
+									<div class="col-33">
+										<button class="button button-big" id="btnLogin"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+									</div>
+								</div>
+							</div>
+							<div class="content-block text-center">
+								<button class="button button-big" id="btnFacebook"><i style="margin-right:10px;" class="fa fa-facebook" aria-hidden="true"></i> Conectar com facebook</button>
+							</div>
+							<div class="content-block text-center">
+								<a class="whiteLink" id="btnRegisterLink" href="views/Cadastro.html">Conectar com email</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+		<script type="text/javascript" src="js/libs/framework7.min.js"></script>
+		<script type="text/javascript" src="js/libs/moment.min.js"></script>
+		<script type="text/javascript" src="js/libs/chart.min.js"></script>
+		<script type="text/javascript" src="js/libs/fullcalendar.js"></script>
+		<script type="text/javascript" src="js/libs/locale-all.js"></script>
+		<script type="text/javascript" src="js/libs/plugin-camera.js"></script>
+		<script type="text/javascript" src="js/libs/plugin-upload.js"></script>
+		<script type="text/javascript" src="js/libs/document-register-element.js"></script>
+		<script type="text/javascript" src="js/libs/plugin-webcomponents.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/model/App.js"></script>
+		<script type="text/javascript" src="js/controller/Index.js"></script>
+		<script type="text/javascript" src="js/controller/Register.js"></script>
+		<script type="text/javascript" src="js/controller/Home.js"></script>
+
+	</body>
+</html>

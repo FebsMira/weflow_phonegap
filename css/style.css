@@ -1,0 +1,146 @@
+.login-image{
+	margin:20px auto;
+	display:block;	
+}
+
+h1,h2,h3,h4,h5,h6{
+	color:white;
+	font-weight:100;
+	margin:0px;
+}
+
+.avatar-sidebar{
+	width:100px;
+	border-radius:50px;
+	margin:0 auto;
+}
+.close-panel{
+	padding:6px 9px;
+	border:1px solid #fff;
+	border-radius:60px;
+	color:white;
+}
+.close-panel > a{
+	color:white;
+}
+
+.shadow {
+	-moz-box-shadow:    inset -3px 0px 10px 5px rgba(0,0,0,0.2);
+	-webkit-box-shadow: inset -3px 0px 10px 5px rgba(0,0,0,0.2);
+	box-shadow:         inset -3px 0px 10px 5px rgba(0,0,0,0.2);
+}
+
+.bg-grad-horizontal {
+    background: red;
+    background: -webkit-linear-gradient(left,#00b66e, #19354d);
+    background: -o-linear-gradient(right,#00b66e, #19354d);
+    background: -moz-linear-gradient(right,#00b66e, #19354d);
+    background: linear-gradient(to right,#00b66e, #19354d);
+}
+.bg-grad-vertical {
+    background: red;
+    background: -webkit-linear-gradient(#00b66e, #19354d);
+    background: -o-linear-gradient(#00b66e, #19354d);
+    background: -moz-linear-gradient(#00b66e, #19354d);
+    background: linear-gradient(#00b66e, #19354d);
+}
+
+.navbar, .subnavbar, .toolbar{
+	background:transparent;
+	border-bottom:1px solid rgba(255,255,255,255,0.3);
+	color:white;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+	color:rgba(255,255,255,0.5);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+	color:rgba(255,255,255,0.5);
+opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+	color:rgba(255,255,255,0.5);
+opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color:rgba(255,255,255,0.5);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+	color:rgba(255,255,255,0.5);
+}
+.toolbar{
+	background:white;
+	color:#333;
+}
+.navbar a.link, .subnavbar a.link, .toolbar a.link{
+	color:#333;
+}
+
+.navbar a.icon-only, .subnavbar a.icon-only, .toolbar a.icon-only{
+	color:white;
+}
+.bg-image{
+	background-image:url("../img/bg.jpg");
+	background-size:cover;
+	background-position:center center;
+}
+.list-block .item-content{
+	background:transparent;
+	color:white;
+}
+.fa-half-increment-x{
+	font-size:1.5em;
+}
+.list-block .item-title.label{
+	width:10%;
+	text-align:center;
+}
+.list-block ul{
+	background:transparent;
+	color:white;
+}
+.list-block .item-after{
+	color:white;
+}
+.list-block input[type=time], .list-block input[type=number], .list-block input[type=text], .list-block input[type=password], .list-block input[type=search], .list-block input[type=email], .list-block input[type=tel], .list-block input[type=url], .list-block input[type=date], .list-block input[type=datetime-local], .list-block select, .list-block textarea{
+	color:white;
+	border:0px;
+}
+.list-block .item-inner{
+	border-bottom:1px solid rgba(255,255,255,0.3);
+}
+.list-block ul:before,.list-block ul:after,.list-block .item-inner:after{
+	background:transparent;
+}
+.content-block,.list-block{
+	margin:20px 0px;
+	color:white;
+}
+.list-block .item-media > img{
+	border-radius:24px;
+}
+
+.text-center{
+	text-align:center;
+}
+.text-right{
+	text-align:right;
+}
+#btnLogin{
+	color:white;
+	border:1px solid white;
+	width:48px;
+	height:48px;
+	border-radius:48px;
+	line-height:24px;
+	text-align:center;
+}
+#btnFacebook{
+	background:#3B5998;
+	color:#fff;
+	border:0px;
+	width:80%;
+	margin:0 auto;
+}
+.whiteLink{
+	color:white;
+}
