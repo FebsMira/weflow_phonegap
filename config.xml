@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap = "http://phonegap.com/ns/1.0"
-	id        = "br.com.tiq"
+	id        = "br.com.weflow"
 	versionCode="100" 
 	version   = "1.0.0">
-	<name>TIQ</name>
+	<name>Weflow</name>
 	<description>
-		TIQ
+		Weflow
 	</description>
 
 	<author href="https://felippegallo.com.br" email="contato@felippegallo.com.br">
-		TIQ
+		Weflow
 	</author>
 
 
