@@ -15,10 +15,11 @@ function onDeviceReady(){
 	//window.Fisioterapeuta = new Fisioterapeuta();
 }
 
-var myApp = new Framework7();
+var myApp = new Framework7({
+	swipePanel: 'left',
+});
 var $$ = Dom7;
 var mainView = myApp.addView('.view-main', {
 	dynamicNavbar: true,
-	swipePanel: 'left',
 	swipeBackPage: false
 });
