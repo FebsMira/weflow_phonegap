@@ -9,6 +9,17 @@ h1,h2,h3,h4,h5,h6{
 	margin:0px;
 }
 
+.bg-green{
+	background: #00b66e;
+}
+.bg-white{
+	background: #fff;
+}
+
+.ofertas-logo{
+	width:150px;
+}
+
 .viagens-header{
 	padding:10px;
 	background:#ddd;

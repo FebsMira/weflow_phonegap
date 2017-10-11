@@ -63,6 +63,9 @@ App.prototype.Index = function() {
 	myApp.onPageAfterAnimation('Home', function (page) {
 		self.HomeScreen();
 	});
+	myApp.onPageAfterAnimation('Ofertas', function (page) {
+		self.OfertasScreen();
+	});
 };
 
 //ACAO DO LOGIN
@@ -74,7 +77,7 @@ App.prototype.LoginAction = function(e) {
 	var self = this;
 	$("#btnLogin").attr("disabled",true);
 	var email = $("#login_email").val();
-	var password = $("#login_password").val(); 
+	var password = $("#login_password").val();
 	var LoginResult = window.Fisioterapeuta.login(email,password);
 	LoginResult.then(function(result) {
 		$("#btnLogin").attr("disabled",false);
@@ -85,7 +88,7 @@ App.prototype.LoginAction = function(e) {
 			myApp.alert(result.msg,self.defaultMsgTitle);
 		}
 	});
-	*/		
+	*/
 };
 
 //ACAO DO LOGOUT
@@ -94,7 +97,7 @@ App.prototype.LogoutAction = function() {
 	LogoutResult.then(function(result) {
 		localStorage.clear();
 		mainView.router.loadPage('index.html');
-	});		
+	});
 };
 
 //ATUALIZA O TOKEN
@@ -115,4 +118,3 @@ App.prototype.RefreshTokenAction = function(result) {
 		self.LogoutAction();
 	}
 };
-
