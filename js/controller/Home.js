@@ -10,7 +10,7 @@ App.prototype.HomeScreen = function() {
 	//BOTAO DO LOGOUT
 	$("#btnLogout").unbind('click touch').on('click touch', self.LogoutAction.bind(self));
 
-	self.HomeListar();
+	//self.HomeListar();
 };
 
 //LISTAR CLIENTES
@@ -29,7 +29,7 @@ App.prototype.HomeListar = function() {
 				var mySearchbar = myApp.searchbar('.searchbarHome', {
 					searchList: '.list-block-search',
 					searchIn: '.item-title'
-				});  
+				});
 
 			});
 		}else{
@@ -52,13 +52,12 @@ App.prototype.HomeListar = function() {
 				var mySearchbar = myApp.searchbar('.searchbarGuiaTestes', {
 					searchList: '.list-block-search',
 					searchIn: '.item-title'
-				});  
+				});
 
 			});
 		}else{
 			self.RefreshTokenAction(result);
 		}
-	});		
+	});
 	*/
 };
-
