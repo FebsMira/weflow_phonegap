@@ -9,6 +9,10 @@ h1,h2,h3,h4,h5,h6{
 	margin:0px;
 }
 
+.color-green{
+	color: #00b66e;
+}
+
 .bg-green{
 	background: #00b66e;
 }
@@ -16,8 +20,16 @@ h1,h2,h3,h4,h5,h6{
 	background: #fff;
 }
 
+.ofertas-card > .content-block{
+	color: #666;
+	font-size: 16px;
+}
+
 .ofertas-logo{
 	width:150px;
+}
+.ofertas-destaque{
+	width:100%;
 }
 
 .viagens-header{

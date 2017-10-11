@@ -4,7 +4,13 @@ App.prototype.OfertasScreen = function() {
 
 	var mySwiper = new Swiper('.swiper-container', {
 		speed: 400,
-		spaceBetween: 100
+		spaceBetween: 10,
+		slidesPerView:2
 	});
 
+	var mySwiper2 = new Swiper('.swiper-container2', {
+		speed: 400,
+		spaceBetween: 10,
+		slidesPerView:2
+	});
 };
