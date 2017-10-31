@@ -3,12 +3,23 @@
 	display:block;
 }
 
+.sobre-image{
+	margin:30px auto;
+	width:50%;
+}
+
 h1,h2,h3,h4,h5,h6{
 	color:white;
 	font-weight:100;
 	margin:0px;
 }
-
+.icon-toolbar{
+	width:60px;
+	display: inline-block;
+}
+.link-toolbar{
+	font-size: 12px;
+}
 .color-green{
 	color: #00b66e;
 }
@@ -108,9 +119,11 @@ opacity:  1;
 .toolbar{
 	background:white;
 	color:#333;
+	height: 70px;
 }
 .navbar a.link, .subnavbar a.link, .toolbar a.link{
 	color:#333;
+	height: 54px;
 }
 
 .navbar a.icon-only, .subnavbar a.icon-only, .toolbar a.icon-only{
@@ -163,7 +176,7 @@ opacity:  1;
 .text-right{
 	text-align:right;
 }
-#btnLogin{
+#btnLogin,#btnCadastro{
 	color:white;
 	border:1px solid white;
 	width:48px;
@@ -181,4 +194,17 @@ opacity:  1;
 }
 .whiteLink{
 	color:white;
+}
+.bars{
+	height: 0px;
+	width:100%;
+	margin:0 auto;
+	background: white;
+}
+.vertical-line{
+	position: absolute;
+	height: 25%;
+	width: 1px;
+	background: white;
+	left: 50%;
 }

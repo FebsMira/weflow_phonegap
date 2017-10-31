@@ -44,12 +44,14 @@
 							</div>
 						</li>
 					</a>
-					<li class="item-content">
-						<div class="item-media"><i class="fa fa-user" aria-hidden="true"></i></div>
-						<div class="item-inner">
-							<div class="item-title">Perfil</div>
-						</div>
-					</li>
+					<a href="views/Perfil.html" onclick="myApp.closePanel()">
+						<li class="item-content">
+							<div class="item-media"><i class="fa fa-user" aria-hidden="true"></i></div>
+							<div class="item-inner">
+								<div class="item-title">Perfil</div>
+							</div>
+						</li>
+					</a>
 					<a href="views/Locais.html" onclick="myApp.closePanel()">
 						<li class="item-content">
 							<div class="item-media"><i class="fa fa-user" aria-hidden="true"></i></div>
@@ -58,30 +60,38 @@
 							</div>
 						</li>
 					</a>
-					<li class="item-content">
-						<div class="item-media"><i class="fa fa-car" aria-hidden="true"></i></div>
-						<div class="item-inner">
-							<div class="item-title">Veículos</div>
-						</div>
-					</li>
-					<li class="item-content">
-						<div class="item-media"><i class="fa fa-gear" aria-hidden="true"></i></div>
-						<div class="item-inner">
-							<div class="item-title">Configurações</div>
-						</div>
-					</li>
-					<li class="item-content">
-						<div class="item-media"><i class="fa fa-file" aria-hidden="true"></i></div>
-						<div class="item-inner">
-							<div class="item-title">Sobre nós</div>
-						</div>
-					</li>
-					<li class="item-content">
-						<div class="item-media"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-						<div class="item-inner">
-							<div class="item-title">Contato</div>
-						</div>
-					</li>
+					<a href="views/MeusVeiculos.html" onclick="myApp.closePanel()">
+						<li class="item-content">
+							<div class="item-media"><i class="fa fa-car" aria-hidden="true"></i></div>
+							<div class="item-inner">
+								<div class="item-title">Veículos</div>
+							</div>
+						</li>
+					</a>
+					<a href="views/MeusAjustes.html" onclick="myApp.closePanel()">
+						<li class="item-content">
+							<div class="item-media"><i class="fa fa-gear" aria-hidden="true"></i></div>
+							<div class="item-inner">
+								<div class="item-title">Configurações</div>
+							</div>
+						</li>
+					</a>
+					<a href="views/Sobre.html" onclick="myApp.closePanel()">
+						<li class="item-content">
+							<div class="item-media"><i class="fa fa-file" aria-hidden="true"></i></div>
+							<div class="item-inner">
+								<div class="item-title">Sobre nós</div>
+							</div>
+						</li>
+					</a>
+					<a href="#" onclick="myApp.closePanel()">
+						<li class="item-content">
+							<div class="item-media"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+							<div class="item-inner">
+								<div class="item-title">Contato</div>
+							</div>
+						</li>
+					</a>
 				</ul>
 			</div>
 			<div class="content-block">
@@ -99,50 +109,79 @@
 					</div>
 				</div>
 				<div class="pages navbar-through toolbar-through">
-					<div data-page="index" class="page no-navbar no-toolbar">
+					<div data-page="index" class="page no-navbar">
 						<div class="page-content bg-image">
-							<div>
-								<img class="login-image" src="img/logo_white.png" />
-							</div>
+
 							<div class="content-block text-center">
-								<p>Saiba o que esperar da estrada dias ou<br>semanas antes da sua viagem</p>
+								<p style="margin-top:60px">Oi, eu sou o WeFlow e consigo te mostrar<br>como será o trânsito dias pra frente :)</p>
 							</div>
-							<form id="index-form">
-								<div class="list-block">
-									<ul>
-										<li class="item-content">
-											<div class="item-inner">
-												<div class="item-title label"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-												<div class="item-input">
-													<input type="email" id="login_email" name="login_email" placeholder="Email">
-												</div>
+							<div class="list-block">
+								<ul>
+									<li class="item-content">
+										<div class="item-inner">
+											<div class="item-title label"><i class="fa fa-microphone" aria-hidden="true"></i></div>
+											<div class="item-input">
+												<input type="email" id="search" name="search" placeholder="Para onde você esta indo?">
 											</div>
-										</li>
-										<li class="item-content">
-											<div class="item-inner">
-												<div class="item-title label"><i class="fa fa-lock" aria-hidden="true"></i></div>
-												<div class="item-input">
-													<input type="password" id="login_password" name="login_password" placeholder="Senha">
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</form>
+										</div>
+									</li>
+								</ul>
+							</div>
 							<div class="content-block">
-								<div class="row">
-									<div class="col-33"></div>
-									<div class="col-33"></div>
-									<div class="col-33">
-										<button class="button button-big" id="btnLogin"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
-									</div>
-								</div>
+								<p><i class="fa fa-history" aria-hidden="true"></i> Histórico</p>
+							</div>
+							<div class="list-block" style="height:35vh; overflow:hidden; overflow-y:auto;">
+								<ul>
+									<a href="views/Planejamento.html">
+										<li class="item-content">
+											<div class="item-media"><i class="fa fa-history" aria-hidden="true"></i></div>
+											<div class="item-inner">
+												<div class="item-title">Rua Humberto da Silva Piques,<br> 1484, Bertioga, SP</div>
+												<div class="item-after">118km</div>
+											</div>
+										</li>
+									</a>
+									<a href="views/Planejamento.html">
+										<li class="item-content">
+											<div class="item-media"><i class="fa fa-history" aria-hidden="true"></i></div>
+											<div class="item-inner">
+												<div class="item-title">Rua Humberto da Silva Piques,<br> 1484, Bertioga, SP</div>
+												<div class="item-after">118km</div>
+											</div>
+										</li>
+									</a>
+									<a href="views/Planejamento.html">
+										<li class="item-content">
+											<div class="item-media"><i class="fa fa-history" aria-hidden="true"></i></div>
+											<div class="item-inner">
+												<div class="item-title">Rua Humberto da Silva Piques,<br> 1484, Bertioga, SP</div>
+												<div class="item-after">118km</div>
+											</div>
+										</li>
+									</a>
+									<a href="views/Planejamento.html">
+										<li class="item-content">
+											<div class="item-media"><i class="fa fa-history" aria-hidden="true"></i></div>
+											<div class="item-inner">
+												<div class="item-title">Rua Humberto da Silva Piques,<br> 1484, Bertioga, SP</div>
+												<div class="item-after">118km</div>
+											</div>
+										</li>
+									</a>
+								</ul>
 							</div>
 							<div class="content-block text-center">
-								<button class="button button-big" id="btnFacebook"><i style="margin-right:10px;" class="fa fa-facebook" aria-hidden="true"></i> Conectar com facebook</button>
+								<p>Ou escolha um dos seus<br>lugares favoritos<br><i class="fa toolbar-icon fa-heart" aria-hidden="true"></i></p>
 							</div>
-							<div class="content-block text-center">
-								<a class="whiteLink" id="btnRegisterLink" href="views/Cadastro.html">Conectar com email</a>
+						</div>
+						<div class="toolbar">
+							<div class="toolbar-inner">
+								<!--<a href="views/Perfil.html" class="link"><i class="fa toolbar-icon fa-user" aria-hidden="true"></i></a>-->
+								<a href="views/CadastroHome.html" class="link link-toolbar"><img class="icon-toolbar icon-profile" src="img/profile.png" /></a>
+								<a href="views/Amigos.html" class="link link-toolbar"><img class="icon-toolbar icon-profile" src="img/friends.png" /></a>
+								<a href="views/Viagens.html" class="link link-toolbar"><img class="icon-toolbar icon-profile" src="img/trips.png" /></a>
+								<a href="views/Notificacoes.html" class="link link-toolbar"><img class="icon-toolbar icon-profile" src="img/bookmarks.png" /></a>
+								<a href="views/Ofertas.html" class="link link-toolbar"><img class="icon-toolbar icon-profile" src="img/discounts.png" /></a>
 							</div>
 						</div>
 					</div>
@@ -164,10 +203,15 @@
 		<script type="text/javascript" src="js/config.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 		<script type="text/javascript" src="js/model/App.js"></script>
+		<script type="text/javascript" src="js/model/Usuario.js"></script>
+		<script type="text/javascript" src="js/model/Viagens.js"></script>
 		<script type="text/javascript" src="js/controller/Index.js"></script>
-		<script type="text/javascript" src="js/controller/Register.js"></script>
+		<script type="text/javascript" src="js/controller/Cadastro.js"></script>
+		<script type="text/javascript" src="js/controller/CadastroHome.js"></script>
 		<script type="text/javascript" src="js/controller/Home.js"></script>
 		<script type="text/javascript" src="js/controller/Ofertas.js"></script>
+		<script type="text/javascript" src="js/controller/PlanejamentoCalendario.js"></script>
+		<script type="text/javascript" src="js/controller/PlanejamentoHorario.js"></script>
 
 	</body>
 </html>

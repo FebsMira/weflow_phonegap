@@ -11,11 +11,6 @@ App.prototype.IndexScreen = function() {
 			navigator.splashscreen.hide();
 		}
 	}
-	//BOTAO DO LOGIN
-	var IndexForm = $("#index-form");
-	IndexForm.unbind('submit').on('submit', function(e){self.LoginAction(e)});
-	var BtnLogin = $("#btnLogin");
-	BtnLogin.unbind('click').on('click', function(e){self.LoginAction(e)});
 };
 
 //INICIALIZACAO
@@ -57,8 +52,11 @@ App.prototype.Index = function() {
 	myApp.onPageAfterAnimation('index', function (page) {
 		self.IndexScreen();
 	});
-	myApp.onPageAfterAnimation('Register', function (page) {
-		self.RegisterScreen();
+	myApp.onPageAfterAnimation('Cadastro', function (page) {
+		self.CadastroScreen();
+	});
+	myApp.onPageAfterAnimation('CadastroHome', function (page) {
+		self.CadastroHomeScreen();
 	});
 	myApp.onPageAfterAnimation('Home', function (page) {
 		self.HomeScreen();
@@ -66,55 +64,31 @@ App.prototype.Index = function() {
 	myApp.onPageAfterAnimation('Ofertas', function (page) {
 		self.OfertasScreen();
 	});
-};
-
-//ACAO DO LOGIN
-App.prototype.LoginAction = function(e) {
-	mainView.router.loadPage('views/Home.html');
-	/*
-	e.preventDefault();
-	e.stopImmediatePropagation();
-	var self = this;
-	$("#btnLogin").attr("disabled",true);
-	var email = $("#login_email").val();
-	var password = $("#login_password").val();
-	var LoginResult = window.Fisioterapeuta.login(email,password);
-	LoginResult.then(function(result) {
-		$("#btnLogin").attr("disabled",false);
-		if(result.status==true){
-			localStorage.token = result.obj.token;
-			mainView.router.loadPage('views/Home.html');
-		}else{
-			myApp.alert(result.msg,self.defaultMsgTitle);
-		}
+	myApp.onPageAfterAnimation('PlanejamentoCalendario', function (page) {
+		self.PlanejamentoCalendarioScreen();
 	});
-	*/
-};
-
-//ACAO DO LOGOUT
-App.prototype.LogoutAction = function() {
-	var LogoutResult = window.Fisioterapeuta.logout();
-	LogoutResult.then(function(result) {
-		localStorage.clear();
-		mainView.router.loadPage('index.html');
+	myApp.onPageAfterAnimation('PlanejamentoHorario', function (page) {
+		self.PlanejamentoHorarioScreen();
 	});
+
+	self.HomeListar();
 };
 
-//ATUALIZA O TOKEN
-App.prototype.RefreshTokenAction = function(result) {
+
+
+//LISTAR VIAGENS
+App.prototype.HomeListar = function() {
 	var self = this;
-	console.log(result);
-	if(result.msg=="token_expired"){
-		var LoginResult = window.Fisioterapeuta.refreshToken();
-		LoginResult.then(function(result) {
-			if(result.status==true){
-				localStorage.token = result.obj.token;
-				eval("self."+mainView.activePage.name+"Screen()");
-			}else{
-				self.LogoutAction();
-			}
+	var HomeScreenResult = window.Viagens.listar();
+	HomeScreenResult.then(function(result) {
+		console.log(result);
+		$.get("templates/HomeListar.html", function(temp) {
+			var div = $("#HomeListar");
+				div.html("");
+			var compiledTemplate = Template7.compile(temp);
+			var html = compiledTemplate(result.obj);
+			div.html(html);
 		});
-	}else{
-		self.LogoutAction();
-	}
+	});
+
 };

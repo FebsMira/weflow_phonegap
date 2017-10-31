@@ -10,9 +10,10 @@ window.onload = function() {
 
 
 function onDeviceReady(){
-	console.log("Ready")
+	console.log("Ready");
 	window.App = new App();
-	//window.Fisioterapeuta = new Fisioterapeuta();
+	window.Usuario = new Usuario();
+	window.Viagens = new Viagens();
 }
 
 var myApp = new Framework7({
